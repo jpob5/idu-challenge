@@ -1,0 +1,55 @@
+body {
+    text-align: center;
+}
+input {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;;
+}
+table {
+    border-spacing: 0;
+    margin: auto;
+    margin-bottom: 4rem;
+    thead {
+        th {
+            &:hover, &:focus {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            &:first-of-type {
+                &:hover, &:focus {
+                    cursor: default;
+                    text-decoration: none;
+                }
+            }
+            &.sort-asc {
+                &::after {
+                    content: "\25BE";
+                }
+            }
+            &.sort-desc {
+                &::after {
+                    content: "\25B4";
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-of-type(2n) {
+                background: #f5f5f5;
+            }
+            td {
+                border-bottom: 1px solid #ccc;
+                &:nth-of-type(2) {
+                    text-align: left;
+                }
+                &:nth-of-type(n+2) {
+                    padding: 0.25rem 0.5rem;
+                }
+                &:nth-of-type(3), &:nth-of-type(4) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
